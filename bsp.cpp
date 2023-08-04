@@ -61,12 +61,12 @@ void print(uint32_t n)
 //逆向输出每一位
 void back_print(uint32_t n)
 {
-	if (n > 9)
+	uint32_t f = 0;
+	for (;n>0;n=n/10)
 	{
-	  printf("%d ", n % 10);
-	  back_print(n / 10);
+		f = f * 10 + n % 10;
 	}
-	printf("%d ", n);
+	printf("%d ", f);
 }
 
 
